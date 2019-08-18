@@ -15,11 +15,7 @@ A simple blog for demonstration purpose. Based on Laravel 5.8
 - JSON PHP Extension
 - BCMath PHP Extension
 
-## Demo
-
-You can try the live demo : [http://gentle-everglades-40337.herokuapp.com/](http://gentle-everglades-40337.herokuapp.com/)
-
-## Demo login info
+## Login info
 
 user: contact@milon.im | password: password
 
@@ -27,7 +23,7 @@ user: contact@milon.im | password: password
 ## Installation
 
 ```
-git clone https://github.com/milon/laravel-blog.git blog
+git clone https://github.com/PavlenkoYurii/laravel-blog.git blog
 cd blog
 composer install
 cp .env.example .env
@@ -56,9 +52,3 @@ This projects exposes some API endpoints. You could request those endpoints with
 /api/users     // only accessible by admin
 /api/posts
 ```
-
-## Author
-
-- [Nuruzzaman Milon](https://milon.im)
-
-Feel free to email me, if you have any question.

@@ -18577,3 +18577,25 @@ module.exports = __webpack_require__(2);
 
 /***/ })
 /******/ ]);
+
+var bob;
+var image = [];
+var  text  = '';
+$(document).ready(function(){
+		$("#image_button").click(function(){
+				 bob =  $("#title").val();
+				$.get( `/api/image/${bob}`, function( data ) {
+						console.log(data)
+						image = data;
+						for ( var i = 0; i < image.length; i++) {
+								text += '<div class="col-md-4"> <img class="image_size" src='+image[i]+ '> </div>';
+						}
+						document.getElementById("demo").innerHTML = text;
+
+				});
+		});
+			$("#demo").click(function(e){
+					var image_src = $(e.target).attr('src');
+					$("#image").val(image_src);
+	 });
+});
