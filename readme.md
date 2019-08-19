@@ -26,6 +26,7 @@ user: contact@milon.im | password: password
 git clone https://github.com/PavlenkoYurii/laravel-blog.git blog
 cd blog
 composer install
+create a database and add this information on new file .env
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
