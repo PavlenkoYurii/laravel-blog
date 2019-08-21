@@ -61,3 +61,31 @@
         </span>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+var bob;
+var image = [];
+var  text  = '';
+
+$(document).ready(function(){
+		$("#image_button").click(function(){
+				 bob =  $("#title").val();
+				$.get( `/api/image/${bob}`, function( data ) {
+						console.log(data)
+						image = data;
+						for ( var i = 0; i < image.length; i++) {
+								text += '<div class="col-md-4"> <img class="image_size" src='+image[i]+ '> </div>';
+						}
+						document.getElementById("demo").innerHTML = text;
+
+				});
+		});
+			$("#demo").click(function(e){
+					var image_src = $(e.target).attr('src');
+					$("#image").val(image_src);
+	 });
+});
+
+</script>
